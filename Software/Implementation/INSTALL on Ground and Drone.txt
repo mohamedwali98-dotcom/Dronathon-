@@ -1,0 +1,15 @@
+# Update system
+sudo apt-get update && sudo apt-get upgrade -y
+
+# Install Python dependencies
+sudo apt-get install -y python3-pip python3-dev
+
+# Install required packages
+pip3 install cryptography pynacl pyserial psutil numpy opencv-python
+
+# For GUI (Ground Station only)
+pip3 install tkinter pillow
+
+# Create project structure
+mkdir -p ~/rescue_drone/{keys,logs,firmware}
+cd ~/rescue_drone
